@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import SignUp from '@/views/SignUp.vue'
+import SignUp from '@/views/SignUpView.vue'
 import NotfoundView from '@/views/NotfoundView.vue'
 
 const router = createRouter({
