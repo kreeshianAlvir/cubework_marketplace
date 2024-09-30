@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>Home Page</h1>
+  <h1 class="text-blue-500">Home Page</h1>
 </template>
