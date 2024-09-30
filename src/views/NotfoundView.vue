@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <h1>Sign Up Page</h1>
+    <h1>404</h1>
 </template>
