@@ -80,3 +80,38 @@
     }
   }
 }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #484848;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+
+  &_links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    a {
+      color: #fff;
+      font-size: 0.7rem;
+    }
+  }
+
+  &_socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    svg {
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+}
