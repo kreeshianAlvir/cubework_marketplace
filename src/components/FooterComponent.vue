@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import router from '@/router'
+import { RouterLink } from 'vue-router'
 import IconFacebook from './icons/IconFacebook.vue'
 import IconInstagram from './icons/IconInstagram.vue'
 import IconTwitter from './icons/IconTwitter.vue'
@@ -48,24 +48,14 @@ const linksFooter: LinksDetails[] = [
     path: '/channel-circles-program'
   }
 ]
-
-const handleNavigatePage = (e: Event, path: string) => {
-  e.preventDefault()
-  router.push(path)
-}
 </script>
 
 <template>
   <div class="footer">
     <div class="footer_links">
-      <a
-        v-for="link in linksFooter"
-        :href="link.path"
-        :key="link.name"
-        @click="(e) => handleNavigatePage(e, link.path)"
-      >
-        {{ link.name }}</a
-      >
+      <RouterLink v-for="link in linksFooter" :to="link.path" :key="link.name">
+        {{ link.name }}
+      </RouterLink>
     </div>
     <div class="footer_socials">
       <IconFacebook />
