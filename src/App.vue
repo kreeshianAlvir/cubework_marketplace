@@ -5,7 +5,9 @@ import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <HeaderComponent />
-  <RouterView />
-  <FooterComponent />
+  <div class="flex flex-col h-screen">
+    <HeaderComponent />
+    <RouterView />
+    <FooterComponent />
+  </div>
 </template>

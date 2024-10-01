@@ -6,7 +6,7 @@ import IconSearchVue from './icons/IconSearch.vue'
 </script>
 
 <template>
-  <main class="header">
+  <main class="header py-4 px-9">
     <h1 class="header_logo">CUBEWORK</h1>
     <div class="header_filter">
       <span>Anywhere</span>

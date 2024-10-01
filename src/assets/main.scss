@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
   border-bottom: 1px solid var(--border-color);
 
   &_logo {
@@ -82,7 +81,6 @@
 }
 
 .footer {
-  position: absolute;
   width: 100%;
   bottom: 0;
   background-color: #484848;
@@ -90,7 +88,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
 
   &_links {
     display: flex;

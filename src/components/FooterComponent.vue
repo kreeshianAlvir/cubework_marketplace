@@ -51,7 +51,7 @@ const linksFooter: LinksDetails[] = [
 </script>
 
 <template>
-  <div class="footer">
+  <div class="footer py-3 px-9">
     <div class="footer_links">
       <RouterLink v-for="link in linksFooter" :to="link.path" :key="link.name">
         {{ link.name }}
