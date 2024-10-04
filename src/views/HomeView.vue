@@ -67,7 +67,7 @@ const categories: CategoryDetails[] = [
 </script>
 
 <template>
-  <div class="flex flex-grow flex-col">
+  <div class="flex flex-col flex-1 overflow-auto">
     <div class="flex justify-between py-5 px-16 border-b-[color: --border-color] border-b">
       <div
         class="flex flex-col items-center gap-2 w-10 cursor-pointer"
@@ -88,7 +88,7 @@ const categories: CategoryDetails[] = [
         </button>
       </div>
     </div>
-    <div class="flex flex-grow overflow-auto py-5 px-9 gap-1">
+    <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 overflow-auto py-5 px-9 gap-5">
       <ItemCardComponent v-for="items in Items.items" :key="items.id" :details="items" />
     </div>
   </div>

@@ -1,13 +1,80 @@
 <script lang="ts" setup>
 import IconStar from './icons/IconStar.vue'
+import { onMounted, ref } from 'vue'
+
+import { ListSlickMethods, VueSlickCarousel } from 'vue-slick-ts'
+import type { SlickInstance } from 'vue-slick-ts'
+import 'vue-slick-ts/dist/css/slick.css'
+
+import IconArrowDropDown from './icons/IconArrowDropDown.vue'
+
+const carousel = ref<SlickInstance | null>(null)
+
+const handleInit = (e: JQuery.Event, instance: SlickInstance) => {
+  console.log(e, instance)
+}
+
+onMounted(() => {
+  console.info(carousel)
+  carousel.value!(ListSlickMethods.SLICK_METHODS_PLAY)
+})
 
 const props = defineProps(['details'])
 const { details } = props
+
+const someList = ref([
+  {
+    html: 'slide1',
+    style: {
+      background: '#1bbc9b'
+    }
+  },
+  {
+    html: 'slide2',
+    style: {
+      background: '#4bbfc3'
+    }
+  },
+  {
+    html: 'slide3',
+    style: {
+      background: '#7baabe'
+    }
+  }
+])
+
+const options = ref({
+  currentPage: 0
+})
+
+const ArrowSlider = () => {
+  return IconArrowDropDown
+}
 </script>
 
 <template>
-  <div class="w-1/6 border h-auto rounded-lg">
-    <div class="w-full h-52 bg-stone-400 rounded-lg">Image Carousel</div>
+  <div
+    class="w-full lg:min-w-full xl:min-w-full hover:shadow-lg rounded-lg box-border cursor-pointer"
+  >
+    <div class="w-full h-52 bg-stone-400 rounded-lg">
+      <!-- <slider ref="slider" :options="options">
+        <slideritem v-for="(item, index) in someList" :key="index" :style="item.style">{{
+          item.html
+        }}</slideritem>
+      </slider> -->
+      <VueSlickCarousel
+        ref="carousel"
+        @init="handleInit"
+        :autoplay-speed="4000"
+        :dots="true"
+        :prevArrow="'<div class=prev></div>'"
+        :nextArrow="'<div class=next></div>'"
+        class="item-carousel h-full"
+      >
+        <div class="bg-red-100 h-52 rounded-md">Test 1</div>
+        <div class="bg-green-100 h-52 rounded-md">Test 2</div>
+      </VueSlickCarousel>
+    </div>
     <div class="w-full h-auto p-2">
       <div class="flex justify-between">
         <h3 class="font-bold">{{ details.item_price }}</h3>

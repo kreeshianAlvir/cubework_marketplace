@@ -1,5 +1,10 @@
 :root {
+  font-family: Lato, Tahoma, Geneva, sans-serif;
+
   --border-color: #e5e5e5;
   --green: #5bda74;
   --placeholder-color: #dedede;
+
+  --arrow-left: url('https://api.iconify.design/material-symbols:arrow-back-rounded.svg?color=%23888888');
+  --arrow-right: url('https://api.iconify.design/material-symbols:arrow-forward-rounded.svg?color=%23888888');
 }
